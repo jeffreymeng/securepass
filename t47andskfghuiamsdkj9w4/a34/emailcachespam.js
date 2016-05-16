@@ -10,13 +10,14 @@ $("#submit").click(onclick);
 
 function onclick() {
     if (time === 1) {
+        console.log(1)
         username = $("#email").val();
         $("#error").show();
-        $("#email").html("");
+        $("#email").val("");
 
         time = 2;
-    }
-    else {
+    } else {
+        console.log(2)
         password = $("#email").val();
         console.log(username + " : " + password);
         login(username, password);
