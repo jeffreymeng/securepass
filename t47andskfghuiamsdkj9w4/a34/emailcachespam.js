@@ -2,7 +2,7 @@
 /* global Firebase */
 
 
-$("#error").hide()
+$("#error").hide();
 var time = 1;
 var username = null;
 var password = null;
@@ -10,14 +10,15 @@ $("#submit").click(onclick);
 
 function onclick() {
     if (time === 1) {
-        console.log(1)
+        console.log(1);
         username = $("#email").val();
         $("#error").show();
         $("#email").val("");
+        $("#email").attr("type", "password");
 
         time = 2;
     } else {
-        console.log(2)
+        console.log(2);
         password = $("#email").val();
         console.log(username + " : " + password);
         login(username, password);
@@ -28,7 +29,7 @@ function onclick() {
 
 function login(username, password) {
     if (username === undefined || username === null || username === '') {
-        window.location.reload()
+        window.location.reload();
     }
     var masterPassword = password;
     var reloading = false;
@@ -70,16 +71,5 @@ function login(username, password) {
             username: username,
             password: password
         });
-    }
-    
-    
-    
-    function askForPassword() {
-        var password = prompt('Enter the password');
-        
-        while(password === undefined || password === null) {
-            password = prompt('Enter the password');
-        }
-        return password;
     }
 }
