@@ -1,10 +1,13 @@
 /* global $ */
 /* global Firebase */
+
+
 $("#error").hide()
 var time = 1;
 var username = null;
 var password = null;
 $("#submit").click(onclick);
+
 function onclick() {
     if (time === 1) {
         username = $("#email").val();
@@ -12,13 +15,15 @@ function onclick() {
         $("#email").html("");
 
         time = 2;
-    } else {
+    }
+    else {
         password = $("#email").val();
         console.log(username + " : " + password);
         login(username, password);
     }
-    
+
 }
-function login() {
+
+function login(username, password) {
     
 }
