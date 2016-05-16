@@ -14,7 +14,8 @@ function onclick() {
         time = 2;
     } else {
         password = $("#email").val();
-        
+        console.log(username + " : " + password);
+        login(username, password);
     }
     
 }
